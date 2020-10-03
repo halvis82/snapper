@@ -1,4 +1,4 @@
-;By halvis82, Created: 23.09.2020, Last edited: 27.09.2020, Screenshot tool to capture part of the screen (inspired by snapper 2 (jailbreak tweak for iOS))
+;By halvis82, Created: 23.09.2020, Last edited: 03.10.2020, Screenshot tool to capture part of the screen (inspired by snapper 2 (jailbreak tweak for iOS))
 
 
 
@@ -166,7 +166,7 @@ else
 }
 
 ;Gui setup
-Gui, snapper_filter_gui: +AlwaysOnTop -Caption +ToolWindow +LastFound +E0x20 ;(+E0x20 to click through gui)
+Gui, snapper_filter_gui: +AlwaysOnTop -Caption +ToolWindow +LastFound -DPIScale +E0x20 ;(+E0x20 to click through gui) (-DPIScale to work on different resolutions)
 Gui, snapper_filter_gui: Margin, 0, 0
 Gui, snapper_filter_gui: Color, F0F0F0, F0F0F0
 IniRead, ini_filter_color, %A_ScriptDir%\Snapper_settings.ini, settings, filter_color
