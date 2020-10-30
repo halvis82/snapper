@@ -1,4 +1,4 @@
-;By halvis82, Created: 27.09.2020, Last edited: 27.09.2020, Program to display image taken by Snapper (only used by Snapper)
+;By halvis82, Created: 27.09.2020, Last edited: 30.10.2020, Program to display image taken by Snapper (only used by Snapper)
 
 ;Consider adding hotkey, 'o', to use OCR on image.
 
@@ -71,7 +71,7 @@ else
         }
 
         ;Main image gui
-        Gui, snapper_image_gui: -Caption +AlwaysOnTop +LastFound +Border
+        Gui, snapper_image_gui: -Caption +AlwaysOnTop +LastFound +Border -DPIScale
         OnMessage(0x201, "WM_LBUTTONDOWN") ;Make gui movable
         Gui, snapper_image_gui: Margin, 0, 0
         if (biggest_side == "width")
@@ -140,7 +140,7 @@ Return
     WinGetPos, previous_snapper_image_x, previous_snapper_image_y,,, %snapper_image_window_name%
 
     Gui, snapper_image_gui: Destroy
-    Gui, snapper_image_gui: -Caption +AlwaysOnTop +LastFound +Border
+    Gui, snapper_image_gui: -Caption +AlwaysOnTop +LastFound +Border -DPIScale
     OnMessage(0x201, "WM_LBUTTONDOWN") ;Make gui movable
     Gui, snapper_image_gui: Margin, 0, 0
     if (biggest_side == "width")
